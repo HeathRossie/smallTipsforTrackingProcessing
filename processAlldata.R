@@ -28,9 +28,9 @@ read.data = function(fileName){
   # filename variable
   d$file = fileName
   
-  ### write your processing here###
-  # such as calcurating velocity, whether animals staying ROI, distance to something, etc
-  
+  ### write your processing here ###
+  # such as calcurating velocity, whether animals staying ROI, distance to something, etc...
+  # according to your research questions
   
   print(paste("data process succeeded! file name : ", substr(fileName, 0, 45), "...",  sep=""  ))
   return(d)
