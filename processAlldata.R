@@ -46,4 +46,4 @@ d$ser = as.integer(as.factor(d$file))
 
 # save file
 setwd("to your path where the processed data to be saved")
-write.csv(d, "d.csv")
+write.csv(d, "d.csv", row.names=FALSE)
