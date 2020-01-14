@@ -11,10 +11,9 @@ files = list.files(pattern = ".csv")
 read.data = function(fileName){
   
   d = fread(fileName, skip=2, data.table = FALSE)
-  d = d[,-1]
   
   ## rename variables
-  colName = colnames(fread(files[1], skip=1, data.table = FALSE))
+  colName = colnames(fread(fileName, skip=1, data.table = FALSE))
   colName[1] = "seq"
   for(i in 2:length(colName)){
     if(i %in% seq(2, length(colName), 3)){
@@ -25,7 +24,7 @@ read.data = function(fileName){
       colName[i] = paste(colName[i], "_likeli", sep="")
     }
   }
-  
+  colnames(d) = colName
   # filename variable
   d$file = fileName
   
